@@ -7,13 +7,17 @@ public class TwoSum {
 
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> numIndex = new HashMap<>();
-        for(int i=0;i<nums.length;i++){
-            int bal =  target - nums[i];
-            if(numIndex.containsKey(bal)){
-                return new int[] {numIndex.get(bal), i};
-            }
-            numIndex.put(nums[i],i);
-        }
+        int count = 0;
+       for(int num : nums){
+           int bal = target - num;
+           if(!numIndex.containsKey(num)){
+               numIndex.put(bal,Integer.valueOf(count));
+           }
+           else {
+               return new int[]{numIndex.get(num),count};
+           }
+           count++;
+       }
         throw new IllegalArgumentException("No two sum solution");
     }
 }
