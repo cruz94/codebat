@@ -9,9 +9,13 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
 
-        TwoSum ts = new TwoSum();
-        int[] ints = ts.twoSum(new int[]{2, 7, 8, 0}, 9);
+        MoveZeros mz = new MoveZeros();
+        int[] ints = mz.moveZeros(new int[]{2,0,5,6,7,0,0,3,4,2,0,1});
         System.out.println(Arrays.toString(ints));
+
+//        TwoSum ts = new TwoSum();
+//        int[] ints = ts.twoSum(new int[]{2, 7, 8, 0}, 9);
+//        System.out.println(Arrays.toString(ints));
 
 //        StringReverse stringRev = new StringReverse();
 //        System.out.println(stringRev.fr?(ontBack("code"));
